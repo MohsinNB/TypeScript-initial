@@ -18,3 +18,8 @@ const poorUser = {
     return `My new balance is ${this.Balance + balance}`;
   },
 };
+
+// Define function in array map Methods
+
+const Arr: number[] = [1, 2, 3, 4, 5];
+const newArr: number[] = Arr.map((elem: number): number => elem * elem);
