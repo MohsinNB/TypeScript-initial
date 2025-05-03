@@ -1,7 +1,7 @@
 // Reference type -------- Object
 
 const user: {
-  company: "programming Hero"; //-------> literal types
+  readonly company: "programming Hero"; //-------> literal types
   firstName: string;
   middleName?: string; // the symbol ? means it's optional
   lastName: string;
