@@ -23,4 +23,11 @@
     }
   };
   getSpeedInMeterPerSecond("1000");
+
+  // Never type
+
+  const ThrowError = (msg: string) => {
+    throw new Error(msg);
+  };
+  ThrowError("Unexpected");
 }
