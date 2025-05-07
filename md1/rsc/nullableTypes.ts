@@ -26,7 +26,7 @@
 
   // Never type
 
-  const ThrowError = (msg: string) => {
+  const ThrowError = (msg: string): never => {
     throw new Error(msg);
   };
   ThrowError("Unexpected");
