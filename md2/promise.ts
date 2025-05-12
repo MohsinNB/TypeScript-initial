@@ -1,9 +1,25 @@
 {
   // Promise in typescript
+  type Todo = {
+    userId: number;
+    id: number;
+    title: string;
+    completed: boolean;
+  };
+  const getToDo = async (): Promise<Todo> => {
+    const response = await fetch(
+      "https://jsonplaceholder.typicode.com/todos/1"
+    );
+    const data = await response.json();
+    return data;
+  };
+  getToDo();
 
-  const createPromise = (): Promise<{ Something: string }> => {
-    return new Promise<{ Something: string }>((resolve, reject) => {
-      const data: { Something: string } = { Something: "something" };
+  type Something = { Something: string };
+
+  const createPromise = (): Promise<Something> => {
+    return new Promise<Something>((resolve, reject) => {
+      const data: Something = { Something: "something" };
       if (data) {
         resolve(data);
       } else {
@@ -13,8 +29,8 @@
   };
 
   //   calling Promise
-  const showData = async (): Promise<{ Something: string }> => {
-    const data: { Something: string } = await createPromise();
+  const showData = async (): Promise<Something> => {
+    const data: Something = await createPromise();
     return data;
   };
   showData();
